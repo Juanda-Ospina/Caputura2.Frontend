@@ -1,0 +1,126 @@
+.pantallaUbicacion {
+  width: 100%;
+  height: calc(100vh - var(--alto-encabezado));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: clamp(8px, 1.8vh, 18px) 16px clamp(10px, 2vh, 20px);
+  overflow: hidden;
+}
+
+.titulo {
+  margin: 0;
+  font-size: clamp(34px, 5vh, 48px);
+  font-weight: 700;
+  text-align: center;
+  line-height: 1.05;
+  color: #0f2d6b;
+}
+
+.subtitulo {
+  margin: clamp(4px, 1vh, 10px) 0 0;
+  font-size: clamp(18px, 2.6vh, 26px);
+  font-weight: 400;
+  text-align: center;
+  color: #555e6e;
+}
+
+.tarjetaSeleccion {
+  margin-top: clamp(12px, 2.5vh, 24px);
+  width: min(460px, 92%);
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: clamp(22px, 4vh, 36px) clamp(24px, 3.2vw, 40px);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(16px, 2.8vh, 26px);
+  box-shadow: 0 4px 24px rgba(30, 80, 160, 0.13), 0 1.5px 6px rgba(0, 0, 0, 0.07);
+}
+
+.grupoCampo {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(6px, 1.2vh, 10px);
+}
+
+.etiqueta {
+  font-size: clamp(17px, 2.4vh, 22px);
+  font-weight: 600;
+  color: #1a5cb8;
+}
+
+.contenedorSelectConFlecha {
+  position: relative;
+}
+
+.select {
+  width: 100%;
+  height: clamp(44px, 6vh, 54px);
+  border: 1.5px solid #c8d4e0;
+  border-radius: 10px;
+  background-color: #ffffff;
+  color: #2b2b2b;
+  font-size: clamp(16px, 2.2vh, 22px);
+  padding: 0 40px 0 16px;
+  outline: none;
+  appearance: none;
+  cursor: pointer;
+}
+
+.select:focus {
+  border-color: #1a5cb8;
+}
+
+.flecha {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: clamp(18px, 2.6vh, 26px);
+  line-height: 1;
+  color: #555e6e;
+  pointer-events: none;
+}
+
+.botonConfirmar {
+  width: 100%;
+  height: clamp(50px, 6.4vh, 56px);
+  border: none;
+  border-radius: 30px;
+  background-color: #0f2d6b;
+  color: #ffffff;
+  font-size: clamp(18px, 2.4vh, 24px);
+  font-weight: 700;
+  cursor: pointer;
+  letter-spacing: 0.02em;
+  transition: background-color 0.2s ease;
+}
+
+.botonConfirmar:hover {
+  background-color: #1a4499;
+}
+
+.piePagina {
+  margin-top: auto;
+  padding-top: clamp(12px, 2.8vh, 28px);
+  text-align: center;
+  font-size: clamp(14px, 1.9vh, 20px);
+  color: #7a8799;
+}
+
+@media (max-width: 560px) {
+  .tarjetaSeleccion {
+    padding: 20px 18px;
+    border-radius: 16px;
+  }
+
+  .botonConfirmar {
+    height: 46px;
+    font-size: 18px;
+  }
+
+  .piePagina {
+    padding-top: 10px;
+    font-size: 13px;
+  }
+}

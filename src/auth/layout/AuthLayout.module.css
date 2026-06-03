@@ -1,0 +1,45 @@
+.contenedorPrincipal {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(180deg, #c8ddf5 0%, #ddeaf8 35%, #eaf2fb 70%, #f0f5fb 100%);
+}
+
+.encabezado {
+  position: relative;
+  width: 100%;
+  height: var(--alto-encabezado);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.encabezado::before {
+  content: '';
+  position: absolute;
+  top: -80px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 130%;
+  height: clamp(200px, 34vh, 270px);
+  background: linear-gradient(180deg, #1a5cb8 0%, #2272d4 100%);
+  border-radius: 0 0 50% 50%;
+}
+
+.logo {
+  position: relative;
+  z-index: 1;
+  width: clamp(140px, 18vw, 210px);
+  max-width: 60%;
+  object-fit: contain;
+}
+
+.contenido {
+  width: 100%;
+  height: calc(100vh - var(--alto-encabezado));
+  display: flex;
+  justify-content: center;
+}
