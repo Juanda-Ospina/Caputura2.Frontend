@@ -36,11 +36,15 @@ export const Ubicacion = () => {
             <option value="linea-3">Línea 3</option>
           </select>
         </div>
+
+        
+        <button type="button" className={estilos.botonConfirmar}>
+        Confirmar
+        </button>
+
       </section>
 
-      <button type="button" className={estilos.botonConfirmar}>
-        Confirmar
-      </button>
+
 
       <footer className={estilos.piePagina}>© 2026 Crystal S.A.S -- Sistema de Eficiencia</footer>
     </div>

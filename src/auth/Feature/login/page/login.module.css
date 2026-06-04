@@ -1,4 +1,4 @@
-.pantallaUbicacion {
+.pantallaLogin {
   width: 100%;
   height: calc(100vh - var(--alto-encabezado));
   display: flex;
@@ -17,15 +17,20 @@
   color: #0f2d6b;
 }
 
-.subtitulo {
-  margin: clamp(4px, 1vh, 10px) 0 0;
-  font-size: clamp(18px, 2.6vh, 26px);
-  font-weight: 400;
-  text-align: center;
-  color: #555e6e;
+.tituloAcento {
+  color: #1a5cb8;
 }
 
-.tarjetaSeleccion {
+.subtitulo {
+  margin: clamp(4px, 1vh, 10px) 0 0;
+  font-size: clamp(16px, 2.2vh, 22px);
+  font-weight: 700;
+  text-align: center;
+  color: #0f2d6b;
+}
+
+/* ── Tarjeta ── */
+.tarjeta {
   margin-top: clamp(12px, 2.5vh, 24px);
   width: min(460px, 92%);
   background-color: #ffffff;
@@ -33,7 +38,7 @@
   padding: clamp(22px, 4vh, 36px) clamp(24px, 3.2vw, 40px);
   display: grid;
   grid-template-columns: 1fr;
-  gap: clamp(16px, 2.8vh, 26px);
+  gap: clamp(14px, 2.4vh, 22px);
   box-shadow: 0 4px 24px rgba(30, 80, 160, 0.13), 0 1.5px 6px rgba(0, 0, 0, 0.07);
 }
 
@@ -44,12 +49,34 @@
 }
 
 .etiqueta {
-  font-size: clamp(17px, 2.4vh, 22px);
+  font-size: clamp(15px, 2.2vh, 20px);
   font-weight: 600;
   color: #1a5cb8;
 }
 
-.contenedorSelectConFlecha {
+/* ── Input texto ── */
+.input {
+  width: 100%;
+  height: clamp(44px, 6vh, 54px);
+  border: 1.5px solid #c8d4e0;
+  border-radius: 10px;
+  background-color: #ffffff;
+  color: #2b2b2b;
+  font-size: clamp(15px, 2vh, 20px);
+  padding: 0 16px;
+  outline: none;
+}
+
+.input::placeholder {
+  color: #a0aab8;
+}
+
+.input:focus {
+  border-color: #1a5cb8;
+}
+
+/* ── Select ── */
+.contenedorSelect {
   position: relative;
 }
 
@@ -60,7 +87,7 @@
   border-radius: 10px;
   background-color: #ffffff;
   color: #2b2b2b;
-  font-size: clamp(16px, 2.2vh, 22px);
+  font-size: clamp(15px, 2vh, 20px);
   padding: 0 40px 0 16px;
   outline: none;
   appearance: none;
@@ -82,25 +109,41 @@
   pointer-events: none;
 }
 
-.botonConfirmar {
+/* ── Botón ── */
+.botonIngresar {
   justify-self: center;
-  width: clamp(160px, 55%, 220px);
-  height: clamp(50px, 6.4vh, 56px);
+  width: clamp(160px, 60%, 240px);
+  height: clamp(46px, 6.4vh, 54px);
   border: none;
   border-radius: 30px;
   background-color: #0f2d6b;
   color: #ffffff;
-  font-size: clamp(18px, 2.4vh, 24px);
+  font-size: clamp(17px, 2.2vh, 22px);
   font-weight: 700;
   cursor: pointer;
   letter-spacing: 0.02em;
   transition: background-color 0.2s ease;
 }
 
-.botonConfirmar:hover {
+.botonIngresar:hover {
   background-color: #1a4499;
 }
 
+/* ── Enlace tutorial ── */
+.enlaceTutorial {
+  justify-self: center;
+  font-size: clamp(14px, 1.9vh, 18px);
+  color: #1a5cb8;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+
+.enlaceTutorial:hover {
+  color: #0f2d6b;
+}
+
+/* ── Pie de página ── */
 .piePagina {
   margin-top: auto;
   padding-top: clamp(12px, 2.8vh, 28px);
@@ -110,14 +153,14 @@
 }
 
 @media (max-width: 560px) {
-  .tarjetaSeleccion {
+  .tarjeta {
     padding: 20px 18px;
     border-radius: 16px;
   }
 
-  .botonConfirmar {
+  .botonIngresar {
     height: 46px;
-    font-size: 18px;
+    font-size: 17px;
   }
 
   .piePagina {
